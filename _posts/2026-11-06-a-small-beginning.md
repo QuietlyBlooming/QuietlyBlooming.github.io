@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "一切的开始"
+title: "A Beginning"
 ---
 ![A quiet moment to begin](/assets/images/first-post.png)
 这是 Quietly Blooming 的第一篇文章。
