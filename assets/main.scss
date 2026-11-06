@@ -354,3 +354,19 @@ a:hover {
     margin-bottom: 32px;
   }
 }
+/* Editorial post image */
+
+.post-content > p > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 42px auto;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .post-content > p > img {
+    margin: 28px auto;
+  }
+}
