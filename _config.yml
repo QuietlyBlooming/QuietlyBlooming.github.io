@@ -12,4 +12,7 @@ show_excerpts: true
 markdown: kramdown
 
 header_pages:
+  - travel.md
+  - thoughts.md
+  - everyday.md
   - about.md
