@@ -3,7 +3,6 @@ layout: home
 list_title: "Recent writing"
 ---
 
-# Welcome to Quietly Blooming
 
 A quiet corner for life, thoughts, and little moments.
 
