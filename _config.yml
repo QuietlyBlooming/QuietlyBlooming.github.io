@@ -1,8 +1,7 @@
 title: Quietly Blooming
 description: "A corner for life, thoughts, and little moments."
 
-author:
-  name: Brion
+author: Brion
 
 url: "https://quietlyblooming.github.io"
 baseurl: ""
@@ -11,3 +10,6 @@ theme: minima
 
 show_excerpts: true
 markdown: kramdown
+
+header_pages:
+  - about.md
