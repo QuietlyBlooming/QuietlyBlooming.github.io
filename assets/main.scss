@@ -176,3 +176,78 @@ a:hover {
     margin-bottom: 45px;
   }
 }
+
+/* =================================
+   HOMEPAGE — EDITORIAL POST LIST
+================================= */
+
+/* 1. Remove default list styling */
+.post-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* 2. Each article becomes a section */
+.post-list > li {
+  position: relative;
+  padding: 30px 0 35px;
+  border-bottom: 1px solid #E5E0D7;
+  transition: padding-left 0.25s ease;
+}
+
+/* 3. Article date */
+.post-list .post-meta {
+  color: #A87962;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* 4. Article title */
+.post-list .post-link {
+  display: inline-block;
+  color: #39372F;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+/* 5. Mouse hover effect */
+.post-list > li:hover {
+  padding-left: 10px;
+}
+
+.post-list .post-link:hover {
+  color: #A87962;
+}
+
+/* 6. Article description */
+.post-list .post-excerpt {
+  color: #716C63;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 680px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* 7. Mobile adaptation */
+@media screen and (max-width: 600px) {
+  .post-list > li {
+    padding: 24px 0 28px;
+  }
+
+  .post-list .post-link {
+    font-size: 25px;
+  }
+
+  .post-list .post-excerpt {
+    font-size: 14px;
+  }
+}
