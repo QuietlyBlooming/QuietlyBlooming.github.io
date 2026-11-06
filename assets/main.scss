@@ -109,3 +109,70 @@ a:hover {
     padding-right: 22px;
   }
 }
+
+/* =================================
+   HOMEPAGE — EDITORIAL DESIGN
+================================= */
+
+/* 1. Small editorial label */
+.home-eyebrow {
+  color: #A87962;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+/* 2. Main homepage title */
+.page-content h1 {
+  font-size: 54px;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin-bottom: 32px;
+  max-width: 850px;
+}
+
+/* 3. Introductory sentence */
+.home-lead {
+  color: #8B7965;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  line-height: 1.65;
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+/* 4. Description */
+.home-description {
+  color: #716C63;
+  font-size: 16px;
+  line-height: 2;
+  max-width: 680px;
+  margin-bottom: 65px;
+}
+
+/* 5. Section heading */
+.home .post-list-heading {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  border-top: 1px solid #E5E0D7;
+  padding-top: 32px;
+  margin-bottom: 35px;
+}
+
+/* 6. Mobile typography */
+@media screen and (max-width: 600px) {
+  .page-content h1 {
+    font-size: 36px;
+    letter-spacing: -0.8px;
+  }
+
+  .home-lead {
+    font-size: 21px;
+  }
+
+  .home-description {
+    margin-bottom: 45px;
+  }
+}
