@@ -4,8 +4,8 @@ title: "Welcome to Quietly Blooming"
 list_title: "Recent writing"
 ---
 
-A quiet corner for life, thoughts, and little moments.
+<p class="home-eyebrow">A PERSONAL JOURNAL · EST. 2026</p>
 
-This is a personal space for essays, thoughts, and small moments from everyday life.
+<p class="home-lead">A quiet corner for thoughts, memories, and everything in between.</p>
 
-Hope it can make you a great day!
+<p class="home-description">Life moves quickly. This is a little space to slow down, collect my thoughts, and remember the moments that make it meaningful.</p>
