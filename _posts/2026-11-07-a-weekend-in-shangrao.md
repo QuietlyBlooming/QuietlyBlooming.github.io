@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "A Journey to Shangrao."
-date: 2026-11-07
+title: "The Mid-Autumn-Festival in Shangrao."
+date: 2026-9-25
 categories: travel
 ---
 
