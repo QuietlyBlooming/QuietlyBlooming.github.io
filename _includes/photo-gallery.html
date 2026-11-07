@@ -1,5 +1,5 @@
 <div
-  class="photo-gallery"
+  class="photo-gallery{% if include.layout == 'portrait' %} photo-gallery--portrait{% endif %}"
   data-manifest="{{ '/assets/images/travel/' | append: include.gallery | append: '/gallery.json' | relative_url }}"
   data-image-base="{{ '/assets/images/travel/' | append: include.gallery | append: '/' | relative_url }}"
 >

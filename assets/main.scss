@@ -521,6 +521,15 @@ a:hover {
   .photo-gallery-item {
     margin-bottom: 20px;
   }
+
+  .photo-gallery--portrait {
+    column-count: 2;
+    column-gap: 24px;
+  }
+
+  .photo-gallery--portrait .photo-gallery-item {
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 600px) {
