@@ -6,38 +6,115 @@
   <p class="gallery-loading">Loading photographs...</p>
 </div>
 
+<dialog class="photo-lightbox" aria-label="Enlarged photograph">
+  <button type="button" class="photo-lightbox-close" aria-label="Close photograph">
+    &times;
+  </button>
+  <img class="photo-lightbox-image" src="" alt="">
+</dialog>
+
 <script>
-document.querySelectorAll(".photo-gallery:not([data-initialized])").forEach(function (gallery) {
-  gallery.dataset.initialized = "true";
+(function () {
+  function setupGallery(gallery) {
+    gallery.dataset.initialized = "true";
 
-  const manifestUrl = gallery.dataset.manifest;
-  const imageBase = gallery.dataset.imageBase;
+    const manifestUrl = gallery.dataset.manifest;
+    const imageBase = gallery.dataset.imageBase;
+    const lightbox = gallery.nextElementSibling;
+    const lightboxImage = lightbox
+      ? lightbox.querySelector(".photo-lightbox-image")
+      : null;
 
-  fetch(manifestUrl)
-    .then(function (response) {
-      if (!response.ok) {
-        throw new Error("Gallery list could not be loaded.");
+    function openLightbox(image) {
+      if (!lightbox || !lightboxImage) {
+        return;
       }
-      return response.json();
-    })
-    .then(function (photos) {
-      gallery.innerHTML = "";
 
-      photos.forEach(function (filename) {
-        const image = document.createElement("img");
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.showModal();
+    }
 
-        image.src = imageBase + encodeURIComponent(filename);
-        image.alt = "Travel photograph";
-        image.loading = "lazy";
+    function closeLightbox() {
+      if (!lightbox || !lightbox.open) {
+        return;
+      }
 
-        gallery.appendChild(image);
+      lightbox.close();
+      lightboxImage.removeAttribute("src");
+    }
+
+    if (lightbox && !lightbox.dataset.initialized) {
+      lightbox.dataset.initialized = "true";
+
+      lightbox
+        .querySelector(".photo-lightbox-close")
+        .addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
       });
-    })
-    .catch(function (error) {
-      gallery.innerHTML =
-        '<p class="gallery-error">Photographs could not be loaded.</p>';
+    }
 
-      console.error(error);
-    });
-});
+    fetch(manifestUrl)
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Gallery list could not be loaded.");
+        }
+        return response.json();
+      })
+      .then(function (photos) {
+        gallery.innerHTML = "";
+
+        photos.forEach(function (filename, index) {
+          const figure = document.createElement("figure");
+          const button = document.createElement("button");
+          const image = document.createElement("img");
+
+          figure.className = "photo-gallery-item";
+          button.type = "button";
+          button.className = "photo-gallery-trigger";
+          button.setAttribute(
+            "aria-label",
+            "View photograph " + (index + 1) + " larger"
+          );
+
+          image.src = imageBase + encodeURIComponent(filename);
+          image.alt =
+            "Shangrao photograph " +
+            String(index + 1).padStart(2, "0");
+          image.loading = "lazy";
+          image.decoding = "async";
+
+          button.addEventListener("click", function () {
+            openLightbox(image);
+          });
+
+          button.appendChild(image);
+          figure.appendChild(button);
+          gallery.appendChild(figure);
+        });
+      })
+      .catch(function (error) {
+        gallery.innerHTML =
+          '<p class="gallery-error">Photographs could not be loaded.</p>';
+
+        console.error(error);
+      });
+  }
+
+  function init() {
+    document
+      .querySelectorAll(".photo-gallery:not([data-initialized])")
+      .forEach(setupGallery);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
 </script>
