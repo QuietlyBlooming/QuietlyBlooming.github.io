@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2026-6-30
 title: "A Beginning"
 ---
 ![A quiet moment to begin](/assets/images/first-post.png)
