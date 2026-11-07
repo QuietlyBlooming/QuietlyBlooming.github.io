@@ -4,10 +4,12 @@ title: About
 permalink: /about/
 ---
 
-# A little about this space
+# A Little About This Space
 
-Welcome to Quietly Blooming.
+Welcome to Quietly Blooming!
 
-This is a personal space for life, thoughts, memories, and little moments.
+This is a personal space for life, thoughts, and little moments in traveling.
 
-A place to slow down, reflect, and quietly grow.
+A place to slow down and reflect.
+
+Hope it can bring you a great day and a light heart.
