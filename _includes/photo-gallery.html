@@ -1,0 +1,43 @@
+<div
+  class="photo-gallery"
+  data-manifest="{{ '/assets/images/travel/' | append: include.gallery | append: '/gallery.json' | relative_url }}"
+  data-image-base="{{ '/assets/images/travel/' | append: include.gallery | append: '/' | relative_url }}"
+>
+  <p class="gallery-loading">Loading photographs...</p>
+</div>
+
+<script>
+document.querySelectorAll(".photo-gallery:not([data-initialized])").forEach(function (gallery) {
+  gallery.dataset.initialized = "true";
+
+  const manifestUrl = gallery.dataset.manifest;
+  const imageBase = gallery.dataset.imageBase;
+
+  fetch(manifestUrl)
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Gallery list could not be loaded.");
+      }
+      return response.json();
+    })
+    .then(function (photos) {
+      gallery.innerHTML = "";
+
+      photos.forEach(function (filename) {
+        const image = document.createElement("img");
+
+        image.src = imageBase + encodeURIComponent(filename);
+        image.alt = "Travel photograph";
+        image.loading = "lazy";
+
+        gallery.appendChild(image);
+      });
+    })
+    .catch(function (error) {
+      gallery.innerHTML =
+        '<p class="gallery-error">Photographs could not be loaded.</p>';
+
+      console.error(error);
+    });
+});
+</script>
