@@ -7,4 +7,4 @@ categories: everyday
 
 A collection of photographs from a sunny weekend.
 
-{% include photo-gallery.html gallery="Jiading" %}
+{% include photo-gallery.html gallery="Jiading" folder="everyday" %}

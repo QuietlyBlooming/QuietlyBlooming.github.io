@@ -1,7 +1,8 @@
+{% assign gallery_folder = include.folder | default: 'travel' %}
 <div
   class="photo-gallery{% if include.layout == 'portrait' %} photo-gallery--portrait{% endif %}"
-  data-manifest="{{ '/assets/images/travel/' | append: include.gallery | append: '/gallery.json' | relative_url }}"
-  data-image-base="{{ '/assets/images/travel/' | append: include.gallery | append: '/' | relative_url }}"
+  data-manifest="{{ '/assets/images/' | append: gallery_folder | append: '/' | append: include.gallery | append: '/gallery.json' | relative_url }}"
+  data-image-base="{{ '/assets/images/' | append: gallery_folder | append: '/' | append: include.gallery | append: '/' | relative_url }}"
 >
   <p class="gallery-loading">Loading photographs...</p>
 </div>
