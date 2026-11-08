@@ -7,7 +7,8 @@ categories: everyday
 
 My first 7.2 km run, and a barbecue to celebrate afterwards.
 
-![The 7.2 km run record](/assets/images/everyday/Run/run-record.jpg){: .post-image-narrow}
+![The 7.2 km run record](/assets/images/everyday/Run/run-record.jpg)
+{: .post-image-narrow}
 
 *The run record.*
 {: .post-caption}
