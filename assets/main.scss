@@ -375,6 +375,88 @@ a:hover {
   text-align: center;
   color: var(--muted-color);
 }
+
+/* Chinese-language article typography */
+[lang="zh"] .post-title {
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC",
+    "Source Han Serif SC", Georgia, serif;
+  font-size: 44px;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+[lang="zh"] .post-content {
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC",
+    "Source Han Serif SC", Georgia, serif;
+  font-size: 17.5px;
+  line-height: 2.1;
+  letter-spacing: 0.3px;
+}
+
+[lang="zh"] .post-content p {
+  margin-bottom: 30px;
+  text-indent: 2em;
+}
+
+[lang="zh"] .post-content h2 {
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC",
+    "Source Han Serif SC", Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  margin-top: 58px;
+  margin-bottom: 26px;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent-color);
+  text-indent: 0;
+}
+
+[lang="zh"] .post-content > p > img + br {
+  display: none;
+}
+
+[lang="zh"] .post-caption {
+  margin-top: -20px;
+  margin-bottom: 44px;
+  text-indent: 0;
+  font-size: 12.5px;
+}
+
+[lang="zh"] .post-content hr {
+  margin: 56px auto;
+  width: 56px;
+  border: 0;
+  border-top: 1px solid #C9BDB0;
+}
+
+[lang="zh"] .post-content .post-closing {
+  text-indent: 0;
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid #E5E0D7;
+  font-size: 16.5px;
+  color: #6F6A61;
+}
+
+@media screen and (max-width: 600px) {
+  [lang="zh"] .post-title {
+    font-size: 32px;
+    line-height: 1.45;
+  }
+
+  [lang="zh"] .post-content {
+    font-size: 16.5px;
+    line-height: 2;
+  }
+
+  [lang="zh"] .post-content h2 {
+    font-size: 22px;
+    margin-top: 44px;
+    padding-left: 12px;
+  }
+}
 /* Editorial article title refinement */
 
 .post-header {
