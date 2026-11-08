@@ -5,7 +5,7 @@ date: 2026-10-27
 categories: everyday
 ---
 
-My first 7.2 km run, and a barbecue to celebrate afterwards.
+My first 7.2 km run, and a barbecue with my friend to celebrate afterwards.
 
 ![The 7.2 km run record](/assets/images/everyday/Run/run-record.jpg)
 {: .post-image-narrow}
