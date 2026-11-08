@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "操场上的一瞥"
-date: 2026-11-08
+title: "A fleeting side profile"
+date: 2026-10-01
 categories: thoughts
 lang: zh
 ---
