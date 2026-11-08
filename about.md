@@ -8,7 +8,7 @@ permalink: /about/
 
 Welcome to Quietly Blooming!
 
-This is a personal space for life, thoughts, and little moments in traveling.
+I'm Brion. This is a personal space for life, thoughts, and little moments in traveling.
 
 A place to slow down and reflect.
 
