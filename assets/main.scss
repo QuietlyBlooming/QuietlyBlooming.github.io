@@ -368,6 +368,19 @@ a:hover {
   margin-bottom: 14px;
 }
 
+/* Phone screenshot image */
+.post-content > p.post-image-phone {
+  text-indent: 0;
+}
+
+.post-content > p.post-image-phone > img {
+  width: 100%;
+  max-width: 340px;
+  margin: 40px auto;
+  border: 1px solid #E5E0D7;
+  border-radius: 8px;
+}
+
 /* Image caption */
 .post-caption {
   margin-top: 0;
