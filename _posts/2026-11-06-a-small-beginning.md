@@ -2,6 +2,7 @@
 layout: post
 date: 2026-6-30
 title: "A Beginning"
+categories: "everyday"
 ---
 ![A quiet moment to begin](/assets/images/first-post.png)
 这是我的博客 Quietly Blooming 的第一篇文章。
